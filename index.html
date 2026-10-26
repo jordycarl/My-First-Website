@@ -1,5 +1,24 @@
 <!DOCTYPE html>
 <html>
+  
+<style>
+@keyframes carFly {
+  from { right: -60px; }
+  to { right: 100%; }
+}
+
+#racecar {
+  position: fixed;
+  top: 50%;
+  right: -60px;
+  font-size: 35px;
+}
+
+#racecar.fly {
+  animation: carFly 2s linear forwards;
+}
+</style>
+
 <head>
   <title>hello ashley</title>
 </head>
@@ -8,6 +27,19 @@
 <button onclick="alert('Greetings Ash.')">Click right here please</button>
   <img src="mclaren-p1.webp" width="500">
   <p>This is jordan. Enjoy working today.</p>
-<div id="racecar">🏎️</div>
+
+<button onclick="launchCar()">LAUNCH CAR! 🏎️</button>
+
+<div id="racecar">🏎️💨</div>
+
+<script>
+function launchCar() {
+  const car = document.getElementById("racecar");
+  car.classList.remove("fly");
+  void car.offsetWidth;
+  car.classList.add("fly");
+}
+</script>
+
 </body>
 </html>

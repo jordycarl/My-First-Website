@@ -4,7 +4,7 @@
 <style>
 @keyframes carFly {
   from { right: -60px; }
-  to { right: 100%; }
+  to { right: calc(100% + 60px); }
 }
 
 #racecar {
@@ -16,6 +16,8 @@
 
 #racecar.fly {
   animation: carFly 2s linear forwards;
+  animation-fill-mode: forwards;
+  visibility: visible;
 }
 </style>
 

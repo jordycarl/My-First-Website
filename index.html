@@ -17,11 +17,37 @@
 #racecar.fly {
   animation: carFly 10s linear forwards;
   animation-fill-mode: forwards;
-  visibility: transparent;
+  visibility: visible;
 }
 </style>
 
-<head>
+
+
+<style>
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("mclaren-p1.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body > *:not(#racecar) {
+  position: relative;
+  z-index: 1;
+}
+
+#racecar {
+  z-index: 2;
+}
+</style>
+
+
+  <head>
   <title>hello ashley</title>
 </head>
 <body style="background-color: #171717; color: white;"></html>
